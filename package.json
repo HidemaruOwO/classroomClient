@@ -1,0 +1,39 @@
+{
+  "name": "GoogleClassroomClient",
+  "version": "1.0.0",
+  "description": "Google-classroom用のclient",
+  "main": "src/main/main.js",
+  "scripts": {
+    "start": "npx electron .",
+    "buildWin": "electron-builder --win --x64",
+    "buildMac": "npx electron-builder --mac --x64"
+  },
+  "author": "Hidemal_OwO",
+  "license": "ISC",
+  "devDependencies": {
+    "electron": "^18.2.3",
+    "electron-builder": "^23.0.3"
+  },
+  "build": {
+    "appId": "net.hide0.classroom-client",
+    "files": [
+      "!.git",
+      "!.dist",
+      "package.json",
+      "packagelock.json",
+      "src"
+    ],
+    "mac": {
+      "target": "dmg",
+      "icon": "src/image/icon.png"
+    },
+    "win": {
+      "target": "nsis",
+      "icon": "src/image/icon.png"
+    },
+    "nsis": {
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true
+    }
+  }
+}
