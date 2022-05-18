@@ -1,5 +1,6 @@
 {
   "name": "GoogleClassroomClient",
+  "email": "support@hide0.net",
   "version": "1.0.0",
   "description": "Google-classroom用のclient",
   "main": "src/main/main.js",
