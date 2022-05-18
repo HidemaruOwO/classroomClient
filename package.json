@@ -6,7 +6,8 @@
   "scripts": {
     "start": "npx electron .",
     "buildWin": "electron-builder --win --x64",
-    "buildMac": "npx electron-builder --mac --x64"
+    "buildMac": "npx electron-builder --mac --x64",
+    "buildLinux": "npx electron-builder --linux --x64"
   },
   "author": "Hidemal_OwO",
   "license": "ISC",
@@ -23,6 +24,14 @@
       "packagelock.json",
       "src"
     ],
+    "linux": {
+      "icon": "src/main/icon.png",
+      "target": [
+        "deb",
+        "rpm",
+        "AppImage"
+      ]
+    },
     "mac": {
       "target": "dmg",
       "icon": "src/image/icon.png"
